@@ -10,11 +10,10 @@ module.exports = {
         await interaction.reply("Please wait")
         try {
             // const user = await interaction.guild.members.fetch({ user: interaction.user.id, withPresences: true }) 
-            // console.log(user.presence.status)
 
-            const guild = await interaction.guild.fetch()
-            const user = await guild.members.fetch(interaction.member.id)
-            console.log(user.user.flags.toArray())
+            // const guild = await interaction.guild.fetch()
+            // const user = await guild.members.fetch(interaction.member.id)
+            // console.log(user)
 
             const db = client.db
             const dbKey = interaction.member.id
