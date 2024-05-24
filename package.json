@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "canvas": "^2.11.2",
+    "chalk": "4.1.2",
+    "console-stamp": "^3.1.2",
+    "discord.js": "^14.15.2",
+    "express": "^4.19.2",
+    "inquirer": "^9.2.22",
+    "jimp": "^0.22.12",
+    "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.3.0"
+  },
+  "scripts": {
+    "deploy": "node ./base/deploy.js",
+    "start": "node index.js"
+  },
+  "reminder": {
+    "for_canvas": "sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev"
+  }
+}
