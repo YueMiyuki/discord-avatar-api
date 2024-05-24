@@ -4,10 +4,23 @@ const path = require('node:path')
 const express = require("express")
 const app = express()
 
+const db = require("enhanced.db-new")
+
 const Canvas = require("canvas")
 
 const { Client, Collection, GatewayIntentBits } = require('discord.js')
-const client = new Client({ intents: [GatewayIntentBits.Guilds] })
+const client = new Client({
+    intents: Object.keys(GatewayIntentBits).map((a) => {
+        return GatewayIntentBits[a]
+    }),
+});
+
+const options = {
+    clearOnStart: false,
+    filename: "enhanced.sqlite",
+};
+
+db.options(options)
 
 client.commands = new Collection()
 const foldersPath = path.join(__dirname, 'commands')
@@ -26,6 +39,7 @@ Canvas.registerFont(`${__dirname}/assets/fonts/setofont.ttf`, { family: 'Seto' }
         client.config = require('./config.js')
         client.log = require('./base/log.js').log
         client.w2j = require('./base/webp2jpg.js').WebPToJPG
+        client.db = db
     } catch (e) {
         console.log(e)
         throw new Error('Failed to import client function!')

@@ -5,6 +5,7 @@
     "chalk": "4.1.2",
     "console-stamp": "^3.1.2",
     "discord.js": "^14.15.2",
+    "enhanced.db-new": "^1.0.2",
     "express": "^4.19.2",
     "inquirer": "^9.2.22",
     "jimp": "^0.22.12",

@@ -265,3 +265,261 @@
 2024/5/24 3:12:15 [INFO] Starting...
 2024/5/24 3:12:15 [INFO] Server is ready!
 2024/5/24 3:12:16 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:9:26 [INFO] Starting...
+2024/5/24 6:9:26 [INFO] Server is ready!
+2024/5/24 6:9:27 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:9:40 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:10:53 [INFO] Starting...
+2024/5/24 6:10:53 [INFO] Server is ready!
+2024/5/24 6:10:53 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:11:0 [ERROR] TypeError: Cannot read properties of null (reading 'status')
+2024/5/24 6:11:1 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:13:49 [INFO] Starting...
+2024/5/24 6:13:49 [INFO] Server is ready!
+2024/5/24 6:13:50 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:14:1 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:15:58 [INFO] Starting...
+2024/5/24 6:15:58 [INFO] Server is ready!
+2024/5/24 6:15:59 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:16:6 [ERROR] TypeError: Cannot read properties of null (reading 'status')
+2024/5/24 6:16:6 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:17:15 [INFO] Starting...
+2024/5/24 6:17:15 [INFO] Server is ready!
+2024/5/24 6:17:16 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:17:21 [ERROR] TypeError: Cannot read properties of null (reading 'status')
+2024/5/24 6:17:22 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:17:33 [INFO] Starting...
+2024/5/24 6:17:33 [INFO] Server is ready!
+2024/5/24 6:17:34 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:17:41 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:18:45 [INFO] Starting...
+2024/5/24 6:18:45 [INFO] Server is ready!
+2024/5/24 6:18:46 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:18:49 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:19:40 [INFO] Starting...
+2024/5/24 6:19:40 [INFO] Server is ready!
+2024/5/24 6:19:40 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:19:46 [ERROR] TypeError: Cannot read properties of undefined (reading 'fetch')
+2024/5/24 6:19:47 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:20:0 [INFO] Starting...
+2024/5/24 6:20:0 [INFO] Server is ready!
+2024/5/24 6:20:1 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:20:4 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:20:55 [INFO] Starting...
+2024/5/24 6:20:55 [INFO] Server is ready!
+2024/5/24 6:20:56 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:21:2 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:21:27 [INFO] Starting...
+2024/5/24 6:21:27 [INFO] Server is ready!
+2024/5/24 6:21:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:21:33 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:30:1 [INFO] Starting...
+2024/5/24 6:30:1 [INFO] Server is ready!
+2024/5/24 6:30:2 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:30:12 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:31:13 [INFO] Starting...
+2024/5/24 6:31:13 [INFO] Server is ready!
+2024/5/24 6:31:14 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:31:16 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:34:39 [INFO] Starting...
+2024/5/24 6:34:39 [INFO] Server is ready!
+2024/5/24 6:34:40 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:34:42 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:40:23 [INFO] Starting...
+2024/5/24 6:40:23 [INFO] Server is ready!
+2024/5/24 6:40:24 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:40:27 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:40:55 [INFO] Starting...
+2024/5/24 6:40:55 [INFO] Server is ready!
+2024/5/24 6:40:56 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:40:58 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:41:5 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:41:15 [INFO] Starting...
+2024/5/24 6:41:15 [INFO] Server is ready!
+2024/5/24 6:41:16 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:41:18 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 6:49:50 [INFO] Starting...
+2024/5/24 6:49:50 [INFO] Server is ready!
+2024/5/24 6:49:51 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:50:28 [INFO] Starting...
+2024/5/24 6:50:28 [INFO] Server is ready!
+2024/5/24 6:50:29 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:51:12 [INFO] Starting...
+2024/5/24 6:51:12 [INFO] Server is ready!
+2024/5/24 6:51:13 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:51:57 [INFO] Starting...
+2024/5/24 6:51:57 [INFO] Server is ready!
+2024/5/24 6:51:58 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:52:27 [INFO] Starting...
+2024/5/24 6:52:27 [INFO] Server is ready!
+2024/5/24 6:52:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:52:38 [INFO] Starting...
+2024/5/24 6:52:38 [INFO] Server is ready!
+2024/5/24 6:52:39 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:52:48 [INFO] Starting...
+2024/5/24 6:52:48 [INFO] Server is ready!
+2024/5/24 6:52:49 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:53:12 [INFO] Starting...
+2024/5/24 6:53:12 [INFO] Server is ready!
+2024/5/24 6:53:13 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:53:34 [INFO] Starting...
+2024/5/24 6:53:34 [INFO] Server is ready!
+2024/5/24 6:53:35 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:54:47 [INFO] Starting...
+2024/5/24 6:54:47 [INFO] Server is ready!
+2024/5/24 6:54:48 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:55:2 [INFO] Starting...
+2024/5/24 6:55:2 [INFO] Server is ready!
+2024/5/24 6:55:3 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:57:23 [INFO] Starting...
+2024/5/24 6:57:23 [INFO] Server is ready!
+2024/5/24 6:57:24 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:58:54 [INFO] Starting...
+2024/5/24 6:58:54 [INFO] Server is ready!
+2024/5/24 6:58:55 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 6:59:34 [INFO] Starting...
+2024/5/24 6:59:34 [INFO] Server is ready!
+2024/5/24 6:59:35 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:0:48 [INFO] Starting...
+2024/5/24 7:0:48 [INFO] Server is ready!
+2024/5/24 7:0:49 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:0:58 [INFO] Starting...
+2024/5/24 7:0:58 [INFO] Server is ready!
+2024/5/24 7:0:59 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:7:27 [INFO] Starting...
+2024/5/24 7:7:27 [INFO] Server is ready!
+2024/5/24 7:7:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:7:36 [INFO] Starting...
+2024/5/24 7:7:36 [INFO] Server is ready!
+2024/5/24 7:7:37 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:7:47 [INFO] Starting...
+2024/5/24 7:7:47 [INFO] Server is ready!
+2024/5/24 7:7:48 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:8:11 [INFO] Starting...
+2024/5/24 7:8:11 [INFO] Server is ready!
+2024/5/24 7:8:12 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:8:25 [INFO] Starting...
+2024/5/24 7:8:25 [INFO] Server is ready!
+2024/5/24 7:8:26 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:8:37 [INFO] Starting...
+2024/5/24 7:8:37 [INFO] Server is ready!
+2024/5/24 7:8:38 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:9:27 [INFO] Starting...
+2024/5/24 7:9:27 [INFO] Server is ready!
+2024/5/24 7:9:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:9:36 [INFO] Starting...
+2024/5/24 7:9:36 [INFO] Server is ready!
+2024/5/24 7:9:37 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:9:46 [INFO] Starting...
+2024/5/24 7:9:46 [INFO] Server is ready!
+2024/5/24 7:9:47 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:10:15 [INFO] Starting...
+2024/5/24 7:10:15 [INFO] Server is ready!
+2024/5/24 7:10:16 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:10:27 [INFO] Starting...
+2024/5/24 7:10:27 [INFO] Server is ready!
+2024/5/24 7:10:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:10:35 [INFO] Starting...
+2024/5/24 7:10:35 [INFO] Server is ready!
+2024/5/24 7:10:36 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:10:45 [INFO] Starting...
+2024/5/24 7:10:45 [INFO] Server is ready!
+2024/5/24 7:10:46 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:10:54 [INFO] Starting...
+2024/5/24 7:10:54 [INFO] Server is ready!
+2024/5/24 7:10:55 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:11:4 [INFO] Starting...
+2024/5/24 7:11:4 [INFO] Server is ready!
+2024/5/24 7:11:5 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:16:57 [INFO] Starting...
+2024/5/24 7:16:57 [INFO] Server is ready!
+2024/5/24 7:16:58 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:18:20 [INFO] Starting...
+2024/5/24 7:18:20 [INFO] Server is ready!
+2024/5/24 7:18:21 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:20:17 [INFO] Starting...
+2024/5/24 7:20:17 [INFO] Server is ready!
+2024/5/24 7:20:18 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:20:57 [INFO] Starting...
+2024/5/24 7:20:57 [INFO] Server is ready!
+2024/5/24 7:20:58 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:24:44 [INFO] Starting...
+2024/5/24 7:24:44 [INFO] Server is ready!
+2024/5/24 7:24:45 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:26:23 [INFO] Starting...
+2024/5/24 7:26:23 [INFO] Server is ready!
+2024/5/24 7:26:24 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:26:41 [INFO] Starting...
+2024/5/24 7:26:41 [INFO] Server is ready!
+2024/5/24 7:26:42 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:27:5 [INFO] Starting...
+2024/5/24 7:27:5 [INFO] Server is ready!
+2024/5/24 7:27:6 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:27:13 [INFO] Starting...
+2024/5/24 7:27:13 [INFO] Server is ready!
+2024/5/24 7:27:14 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:30:18 [INFO] Starting...
+2024/5/24 7:30:18 [INFO] Server is ready!
+2024/5/24 7:30:19 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:31:0 [INFO] Starting...
+2024/5/24 7:31:0 [INFO] Server is ready!
+2024/5/24 7:31:1 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:32:36 [INFO] Starting...
+2024/5/24 7:32:36 [INFO] Server is ready!
+2024/5/24 7:32:37 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:32:43 [ERROR] ReferenceError: guild is not defined
+2024/5/24 7:32:43 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 7:33:12 [INFO] Starting...
+2024/5/24 7:33:12 [INFO] Server is ready!
+2024/5/24 7:33:12 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:33:21 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 7:35:8 [INFO] Starting...
+2024/5/24 7:35:8 [INFO] Server is ready!
+2024/5/24 7:35:9 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:35:16 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 7:35:27 [INFO] Starting...
+2024/5/24 7:35:27 [INFO] Server is ready!
+2024/5/24 7:35:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:35:30 [INFO] Command init ran by miyuki_3747 (847761781409447947)
+2024/5/24 7:40:45 [INFO] Starting...
+2024/5/24 7:40:45 [INFO] Server is ready!
+2024/5/24 7:40:46 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:41:10 [INFO] Starting...
+2024/5/24 7:41:10 [INFO] Server is ready!
+2024/5/24 7:41:11 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:41:45 [INFO] Starting...
+2024/5/24 7:41:46 [INFO] Server is ready!
+2024/5/24 7:41:47 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:41:55 [INFO] Starting...
+2024/5/24 7:41:55 [INFO] Server is ready!
+2024/5/24 7:41:56 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:7 [INFO] Starting...
+2024/5/24 7:42:7 [INFO] Server is ready!
+2024/5/24 7:42:8 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:15 [INFO] Starting...
+2024/5/24 7:42:15 [INFO] Server is ready!
+2024/5/24 7:42:15 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:27 [INFO] Starting...
+2024/5/24 7:42:27 [INFO] Server is ready!
+2024/5/24 7:42:28 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:35 [INFO] Starting...
+2024/5/24 7:42:35 [INFO] Server is ready!
+2024/5/24 7:42:36 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:43 [INFO] Starting...
+2024/5/24 7:42:43 [INFO] Server is ready!
+2024/5/24 7:42:44 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:42:52 [INFO] Starting...
+2024/5/24 7:42:52 [INFO] Server is ready!
+2024/5/24 7:42:53 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:44:28 [INFO] Starting...
+2024/5/24 7:44:28 [INFO] Server is ready!
+2024/5/24 7:44:29 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:45:6 [INFO] Starting...
+2024/5/24 7:45:6 [INFO] Server is ready!
+2024/5/24 7:45:6 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:45:17 [INFO] Starting...
+2024/5/24 7:45:17 [INFO] Server is ready!
+2024/5/24 7:45:18 [INFO] Ready! Logged in as Avatar API#7634
+2024/5/24 7:48:13 [INFO] Starting...
+2024/5/24 7:48:13 [INFO] Server is ready!
+2024/5/24 7:48:14 [INFO] Ready! Logged in as Avatar API#7634

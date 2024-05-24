@@ -4,8 +4,6 @@ module.exports = {
         const sharp = require('sharp');
         const avatarURL = `https://cdn.discordapp.com/avatars/${uid}/${userAvatar}.webp`;
 
-        console.log(avatarURL)
-
         try {
             // Fetch the WebP image from the URL
             const response = await axios.get(avatarURL, { responseType: 'arraybuffer' });
@@ -13,7 +11,11 @@ module.exports = {
 
             // Convert the WebP image to JPEG using sharp
             const jpegBuffer = await sharp(webpBuffer)
-                .jpeg()
+                .jpeg({
+                    quality: 100, // Set quality to 100
+                    mozjpeg: true, // Use Mozilla JPEG encoder
+                    chromaSubsampling: '4:4:4' // Disable chroma subsampling for better color quality
+                })
                 .toBuffer();
 
             return jpegBuffer;
