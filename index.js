@@ -39,6 +39,7 @@ Canvas.registerFont(`${__dirname}/assets/fonts/setofont.ttf`, { family: 'Seto' }
         client.config = require('./config.js')
         client.log = require('./base/log.js').log
         client.w2j = require('./base/webp2jpg.js').WebPToJPG
+        client.b2h = require('./base/b10toHex.js').colorToHexString
         client.db = db
     } catch (e) {
         console.log(e)

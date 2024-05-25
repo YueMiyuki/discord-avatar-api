@@ -1,14 +1,10 @@
-const e = require("express");
-
 module.exports = {
     request: async function (req, res, client) {
         const Canvas = require("canvas");
         const jimp = require("jimp");
         const path = require("path");
 
-        function colorToHexString(dColor) {
-            return '#' + ("000000" + (((dColor & 0xFF) << 16) + (dColor & 0xFF00) + ((dColor >> 16) & 0xFF)).toString(16)).slice(-6);
-        }
+        const colorToHexString = client.b2h
 
         try {
             if (!req.query.userID) {
@@ -30,17 +26,17 @@ module.exports = {
             const guildMember = await guild.members.fetch(uid, { withPresences: true })
 
             const user = guildMember.user
-            // console.log(guildMember)
 
             const user_ff = await client.users.fetch(uid, { force: true })
-            const acolor = await colorToHexString(user_ff.accentColor)
-            console.log(acolor)
+            const acolor = colorToHexString(user_ff.accentColor)
 
             let presence = "offline"
             let state = "No status"
             const avatar = user.avatar
             if (guildMember.presence) {
                 presence = guildMember.presence.status
+            }
+            if (guildMember.presence.activities.length !== 0) {
                 state = guildMember.presence.activities[0].state
             }
 
@@ -101,12 +97,14 @@ module.exports = {
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
             // Draw border around the entire canvas
-            const borderWidth = 5; // Example border width, adjust as needed
+            const borderWidth = 8;
+            const borderRadius = 14;
             ctx.lineWidth = borderWidth;
-            ctx.strokeStyle = 'red'; // Example border color, adjust as needed
+            ctx.strokeStyle = acolor;
 
             // Draw the border around the entire canvas
-            ctx.strokeRect(borderWidth / 2, borderWidth / 2, canvas.width - borderWidth, canvas.height - borderWidth);
+            ctx.roundRect(borderWidth / 2, borderWidth / 2, canvas.width - borderWidth, canvas.height - borderWidth, borderRadius);
+            ctx.stroke();
 
             const image = await jimp.read(avatarJPG);
             const resizeAvatar = image.resize(512, 512);
@@ -140,14 +138,16 @@ module.exports = {
             ctx.textAlign = "start";
             ctx.strokeStyle = "#f5f5f5";
 
-            const hypesquadImgDir = path.resolve(__dirname, '../assets/images/', `${hypesquad}`)
-            const hypesquadImg = await jimp.read(hypesquadImgDir)
-            const resizeHypesquad = hypesquadImg.resize(48, 48)
+            if (hypesquad !== null) {
+                const hypesquadImgDir = path.resolve(__dirname, '../assets/images/', `${hypesquad}`)
+                const hypesquadImg = await jimp.read(hypesquadImgDir)
+                const resizeHypesquad = hypesquadImg.resize(48, 48)
 
-            const hypesquadImgRaw = await resizeHypesquad.getBufferAsync("image/png")
+                const hypesquadImgRaw = await resizeHypesquad.getBufferAsync("image/png")
 
-            const hypesquadBadge = await Canvas.loadImage(hypesquadImgRaw)
-            ctx.drawImage(hypesquadBadge, 365, 55, 32, 32)
+                const hypesquadBadge = await Canvas.loadImage(hypesquadImgRaw)
+                ctx.drawImage(hypesquadBadge, 16, 16, 32, 32)
+            }
 
             // Draw each line of the state text
             lines.forEach((line, index) => {
