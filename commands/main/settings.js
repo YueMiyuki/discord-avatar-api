@@ -61,9 +61,12 @@ module.exports = {
             .setValue("online"),
         );
 
-        const row = new ActionRowBuilder().addComponents(select);
+      const row = new ActionRowBuilder().addComponents(select);
 
-        const userResponse = await interaction.editReply({embeds: [replyEmbed], components: [row]})
+      const userResponse = await interaction.editReply({
+        embeds: [replyEmbed],
+        components: [row],
+      });
     } catch (e) {
       console.log(e);
       await interaction.editReply({

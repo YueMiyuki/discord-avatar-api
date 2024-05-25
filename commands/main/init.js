@@ -29,7 +29,7 @@ module.exports = {
         .setColor(acolor)
         .setTitle("Setting up your banner API")
         .setDescription(
-          "Are you sure you want to continue?\nThis will set your guild to the current guild you are in."
+          "Are you sure you want to continue?\nThis will set your guild to the current guild you are in.",
         )
         .setTimestamp()
         .setFooter({
