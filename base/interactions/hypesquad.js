@@ -60,6 +60,7 @@ module.exports = {
     const response = await interaction.reply({
       embeds: [replyEmbed],
       components: [row],
+      fetchReply: true,
     });
 
     const collectorFilter = (i) => i.user.id === interaction.user.id;
@@ -72,24 +73,27 @@ module.exports = {
         db.set("hypesquad_" + interaction.guild.id, true);
         await confirmation.update({
           content: "Hypesquad enabled",
+          embeds: [],
           components: [],
         });
       } else if (confirmation.customId === "hypesquadDisable") {
         db.set("hypesquad_" + interaction.guild.id, false);
         await confirmation.update({
           content: "Hypesquad disabled",
+          embeds: [],
           components: [],
         });
       } else if (confirmation.customId === "hypesquadCancel") {
         await confirmation.update({
           content: "Action cancelled",
+          embeds: [],
           components: [],
         });
       }
     } catch (e) {
-      console.log(e);
       await interaction.editReply({
         content: "Confirmation not received within 1 minute, cancelling",
+        embeds: [],
         components: [],
       });
     }
