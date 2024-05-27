@@ -74,6 +74,7 @@ module.exports = {
             fetchReply: true,
           });
           db.set(dbKey, dbValue);
+          db.set("hypesquad_" + interaction.guild.id, true);
         } else if (confirmation.customId === "cancel") {
           await confirmation.update({
             content: "Action cancelled",
