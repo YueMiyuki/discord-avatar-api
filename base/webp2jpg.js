@@ -1,3 +1,10 @@
+/**
+ * Change webp image to jpg image.
+ * @param {uid} uid The user ID.
+ * @param {userAvatar} userAvatar The user avatar url
+ * @return {number} The jpg image
+ */
+
 module.exports = {
   WebPToJPG: async function (uid, userAvatar) {
     const axios = require("axios");

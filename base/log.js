@@ -1,3 +1,10 @@
+/**
+ * Client logger.
+ * @param {message} message The message to be logged
+ * @param {type} type The type of message to be logged
+ * @return {log} Log to console
+ */
+
 module.exports = {
   log: function (message, type) {
     require("console-stamp")(console, {
