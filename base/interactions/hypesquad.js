@@ -15,7 +15,7 @@ module.exports = {
     const user = interaction.member.user;
     const acolor = await client.b2h(user_ff.accentColor);
 
-    const isEnabled = db.get("hypesquad_" + interaction.guild.id);
+    const isEnabled = db.get("hypesquad_" + interaction.user.id);
     const replyEmbed = new EmbedBuilder()
       .setColor(acolor)
       .setTitle("Hypesquad configuration")
@@ -70,14 +70,14 @@ module.exports = {
         time: 60_000,
       });
       if (confirmation.customId === "hypesquadEnable") {
-        db.set("hypesquad_" + interaction.guild.id, true);
+        db.set("hypesquad_" + interaction.user.id, true);
         await confirmation.update({
           content: "Hypesquad enabled",
           embeds: [],
           components: [],
         });
       } else if (confirmation.customId === "hypesquadDisable") {
-        db.set("hypesquad_" + interaction.guild.id, false);
+        db.set("hypesquad_" + interaction.user.id, false);
         await confirmation.update({
           content: "Hypesquad disabled",
           embeds: [],
