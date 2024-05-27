@@ -1,3 +1,5 @@
+// Draws the presence of the user on the canvas.
+
 module.exports = {
   drawPresence: async function (ctx, guildMember) {
     let presence = "offline";

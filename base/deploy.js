@@ -1,4 +1,5 @@
 // This script is used to deploy slash commands to Discord.
+// Run: npm run deploy
 
 const { REST, Routes } = require("discord.js");
 const fs = require("node:fs");

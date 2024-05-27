@@ -1,3 +1,5 @@
+// Ready handler
+
 const { Events } = require("discord.js");
 
 module.exports = {

@@ -1,3 +1,5 @@
+// Draws a border around the canvas.
+
 module.exports = {
   drawBorder: async function (client, ctx, user, canvas) {
     const acolor = client.b2h(user.accentColor);

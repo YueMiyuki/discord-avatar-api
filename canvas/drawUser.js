@@ -1,3 +1,5 @@
+// Draw user's name and username on the canvas.
+
 module.exports = {
   drawUser: async function (ctx, user) {
     const Canvas = require("canvas");

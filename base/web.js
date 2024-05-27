@@ -1,3 +1,5 @@
+// Web handler
+
 module.exports = {
   request: async function (req, res, client) {
     const Canvas = require("canvas");

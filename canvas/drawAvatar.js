@@ -1,3 +1,5 @@
+// Draws avatar
+
 module.exports = {
   drawAvatar: async function (client, ctx, user) {
     const Canvas = require("canvas");

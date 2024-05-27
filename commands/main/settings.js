@@ -1,3 +1,5 @@
+// Command: Settings
+
 const {
   ActionRowBuilder,
   ButtonBuilder,
@@ -45,11 +47,11 @@ module.exports = {
             .setValue("font"),
           new StringSelectMenuOptionBuilder()
             .setLabel("Status Settings")
-            .setDescription("Should we show your status on the banner?")
+            .setDescription("Set your status in the banner!")
             .setValue("status"),
           new StringSelectMenuOptionBuilder()
             .setLabel("Username settings")
-            .setDescription("Should we show your username on the banner?")
+            .setDescription("Set your username in the banner!")
             .setValue("username"),
           new StringSelectMenuOptionBuilder()
             .setLabel("Banner border settings")
@@ -63,7 +65,7 @@ module.exports = {
 
       const row = new ActionRowBuilder().addComponents(select);
 
-      const userResponse = await interaction.editReply({
+      await interaction.editReply({
         embeds: [replyEmbed],
         components: [row],
       });

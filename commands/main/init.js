@@ -1,3 +1,5 @@
+// Command: Init
+
 const {
   ActionRowBuilder,
   ButtonBuilder,
