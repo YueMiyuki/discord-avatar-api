@@ -29,11 +29,11 @@ module.exports = {
     }
 
     const isEnabled = db.get("presence_enable_" + interaction.user.id);
-    let userEnable
+    let userEnable;
     if (isEnabled) {
-      userEnable = "Yes"
+      userEnable = "Yes";
     } else if (!isEnabled) {
-      userEnable = "No"
+      userEnable = "No";
     }
 
     const replyEmbed = new EmbedBuilder()
@@ -57,12 +57,12 @@ module.exports = {
       .setStyle(ButtonStyle.Primary);
 
     let enableButton = new ButtonBuilder()
-      .setCustomId("hypesquadEnable")
+      .setCustomId("presenceEnable")
       .setLabel("Enable")
       .setStyle(ButtonStyle.Success);
 
     let disableButton = new ButtonBuilder()
-      .setCustomId("hypesquadDisable")
+      .setCustomId("presenceDisable")
       .setLabel("Disable")
       .setStyle(ButtonStyle.Danger);
 
@@ -72,7 +72,11 @@ module.exports = {
       enableButton.setDisabled(true);
     }
 
-    const row = new ActionRowBuilder().addComponents(settingsButton, enableButton, disableButton);
+    const row = new ActionRowBuilder().addComponents(
+      settingsButton,
+      enableButton,
+      disableButton
+    );
     const response = await interaction.reply({
       embeds: [replyEmbed],
       components: [row],
@@ -85,10 +89,30 @@ module.exports = {
         filter: collectorFilter,
         time: 60_000,
       });
-      if (confirmation.customId === "changePresenceSettings") {
+      if (confirmation.customId === "presenceEnable") {
+        db.set("presence_enable_" + interaction.user.id, true);
+        await confirmation.update({
+          content: "Presence enabled",
+          embeds: [],
+          components: [],
+        });
+      } else if (confirmation.customId === "presenceDisable") {
+        db.set("presence_enable_" + interaction.user.id, false);
+        await confirmation.update({
+          content: "Presence disabled",
+          embeds: [],
+          components: [],
+        });
+      } else if (confirmation.customId === "presenceCancel") {
+        await confirmation.update({
+          content: "Action cancelled",
+          embeds: [],
+          components: [],
+        });
+      } else if (confirmation.customId === "changePresenceSettings") {
         const modal = new ModalBuilder()
-        .setCustomId('presenceSettingsModal')
-        .setTitle('Presence settings');
+          .setCustomId("presenceSettingsModal")
+          .setTitle("Presence settings");
 
         const presenceSettingsInput = new TextInputBuilder()
           .setMinLength(10)
@@ -97,15 +121,15 @@ module.exports = {
           .setPlaceholder("Enter some text!")
           .setStyle(TextInputStyle.Short)
           .setRequired(true);
-          const ActionRow = new ActionRowBuilder().addComponents(presenceSettingsInput);
+        const ActionRow = new ActionRowBuilder().addComponents(
+          presenceSettingsInput
+        );
 
-          modal.addComponents(ActionRow);
-          await confirmation.showModal(modal)
+        modal.addComponents(ActionRow);
+        await confirmation.showModal(modal);
       }
-      
-      
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   },
 };

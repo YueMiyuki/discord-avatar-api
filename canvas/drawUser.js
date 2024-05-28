@@ -25,7 +25,7 @@ module.exports = {
 
     // Start Hypesquad section
     const hypesquad = await db.get("hypesquad_" + user.id);
-    console.log(hypesquad)
+
     if (hypesquad) {
       let hypesquadA = null;
       let hypesquad;

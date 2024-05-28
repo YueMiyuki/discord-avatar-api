@@ -13,52 +13,21 @@ module.exports = {
       presence = guildMember.presence.status;
     }
 
-    if (presence === "idle") {
-      ctx.shadowColor = "#F0B333";
-      ctx.shadowBlur = 13;
-      ctx.fillStyle = "#F0B333";
-      ctx.beginPath();
-      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
-      ctx.fill();
-    }
-    if (presence === "online") {
-      ctx.shadowColor = "#22a45a";
-      ctx.shadowBlur = 13;
-      ctx.fillStyle = "#22a45a";
-      ctx.beginPath();
-      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
-      ctx.fill();
-    }
-    if (presence === "dnd") {
-      ctx.shadowColor = "#f33f42";
-      ctx.shadowBlur = 13;
-      ctx.fillStyle = "#f33f42";
-      ctx.beginPath();
-      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
-      ctx.fill();
-    }
-    if (presence === "offline") {
-      ctx.shadowColor = "#81858e";
-      ctx.shadowBlur = 13;
-      ctx.fillStyle = "#81858e";
-      ctx.beginPath();
-      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
-      ctx.fill();
-    }
-
     const presenceEnabled = await db.get("presence_enable_" + guildMember.id);
     if (!presenceEnabled) return;
 
+    let state;
     const presenceSettings = await db.get("presence_" + guildMember.id);
     if (presenceSettings === "Default") {
-      let state = "No status";
       if (guildMember.presence.activities.length !== 0) {
-        state = guildMember.presence.activities[0].state;
+        state = await guildMember.presence.activities[0].state;
+      } else {
+        state = "No status";
       }
     } else if (presenceSettings !== "Default") {
-      state = presenceSettings;
+      state = await presenceSettings;
     }
-      
+    
     while (state.length > 0) {
       if (state.length > maxLength) {
         let splitPos = state.lastIndexOf(" ", maxLength);
@@ -94,5 +63,38 @@ module.exports = {
     lines.forEach((line, index) => {
       ctx.fillText(line, 245, 155 + index * 25); // Adjust the Y-coordinate for each line
     });
+
+    if (presence === "idle") {
+      ctx.shadowColor = "#F0B333";
+      ctx.shadowBlur = 13;
+      ctx.fillStyle = "#F0B333";
+      ctx.beginPath();
+      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
+      ctx.fill();
+    }
+    if (presence === "online") {
+      ctx.shadowColor = "#22a45a";
+      ctx.shadowBlur = 13;
+      ctx.fillStyle = "#22a45a";
+      ctx.beginPath();
+      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
+      ctx.fill();
+    }
+    if (presence === "dnd") {
+      ctx.shadowColor = "#f33f42";
+      ctx.shadowBlur = 13;
+      ctx.fillStyle = "#f33f42";
+      ctx.beginPath();
+      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
+      ctx.fill();
+    }
+    if (presence === "offline") {
+      ctx.shadowColor = "#81858e";
+      ctx.shadowBlur = 13;
+      ctx.fillStyle = "#81858e";
+      ctx.beginPath();
+      ctx.arc(185, 180, 15, 0, 2 * Math.PI, true);
+      ctx.fill();
+    }
   },
 };
