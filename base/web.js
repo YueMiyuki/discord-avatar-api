@@ -50,7 +50,11 @@ module.exports = {
       );
       await require("../canvas/drawAvatar").drawAvatar(client, ctx, user);
       await require("../canvas/drawUser").drawUser(client, ctx, user);
-      await require("../canvas/drawPresence").drawPresence(client, ctx, guildMember);
+      await require("../canvas/drawPresence").drawPresence(
+        client,
+        ctx,
+        guildMember,
+      );
 
       res.setHeader("Content-Type", "image/png");
       res.send(canvas.toBuffer());

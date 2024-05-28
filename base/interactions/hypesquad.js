@@ -16,14 +16,14 @@ module.exports = {
     const acolor = await client.b2h(user_ff.accentColor);
 
     const isEnabled = db.get("hypesquad_" + interaction.user.id);
-    let userEnable
+    let userEnable;
     if (isEnabled) {
-      userEnable = "Yes"
+      userEnable = "Yes";
     } else if (!isEnabled) {
-      userEnable = "No"
+      userEnable = "No";
     }
 
-    let hypesquadA
+    let hypesquadA;
     let hypesquad;
     if (user.flags.toArray()) {
       hypesquadA = user.flags.toArray()[0];
@@ -36,7 +36,6 @@ module.exports = {
       }
     }
 
-    
     const replyEmbed = new EmbedBuilder()
       .setColor(acolor)
       .setTitle("Hypesquad configuration")
@@ -112,6 +111,7 @@ module.exports = {
         });
       }
     } catch (e) {
+      console.log(e);
       await interaction.editReply({
         content: "Confirmation not received within 1 minute, cancelling",
         embeds: [],

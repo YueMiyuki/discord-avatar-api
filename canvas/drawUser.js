@@ -44,7 +44,7 @@ module.exports = {
         const hypesquadImgDir = path.resolve(
           __dirname,
           "../assets/images/",
-          `${hypesquad}`
+          `${hypesquad}`,
         );
         const hypesquadImg = await jimp.read(hypesquadImgDir);
         const resizeHypesquad = hypesquadImg.resize(48, 48);

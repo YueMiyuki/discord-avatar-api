@@ -9,10 +9,10 @@ module.exports = {
     const db = client.db;
     if (!interaction.isModalSubmit()) return;
     const customPresence = await interaction.fields.getTextInputValue(
-      "presenceSettingsInput"
+      "presenceSettingsInput",
     );
     db.set("presence_" + interaction.user.id, customPresence);
 
-    interaction.reply("ok")
+    interaction.reply("ok");
   },
 };

@@ -27,7 +27,7 @@ module.exports = {
     } else if (presenceSettings !== "Default") {
       state = await presenceSettings;
     }
-    
+
     while (state.length > 0) {
       if (state.length > maxLength) {
         let splitPos = state.lastIndexOf(" ", maxLength);

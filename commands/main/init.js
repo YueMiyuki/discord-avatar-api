@@ -83,12 +83,11 @@ module.exports = {
 
           db.set("username_" + interaction.user.id, "Default");
           db.set("username_enable_" + interaction.user.id, true);
-          
+
           db.set("banner_" + interaction.user.id, true);
 
           db.set("online_" + interaction.user.id, true);
           db.set("online_enable_" + interaction.user.id, true);
-
         } else if (confirmation.customId === "cancel") {
           await confirmation.update({
             content: "Action cancelled",

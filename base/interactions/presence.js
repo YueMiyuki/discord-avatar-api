@@ -7,7 +7,6 @@ const {
   TextInputBuilder,
   TextInputStyle,
 } = require("discord.js");
-const e = require("express");
 
 module.exports = {
   handler: async function (interaction) {
@@ -43,7 +42,7 @@ module.exports = {
       .addFields(
         { name: "Enabled?", value: `${userEnable}`, inline: true },
         { name: "Content", value: `${currentSettings}`, inline: true },
-        { name: "\u200B", value: "\u200B" }
+        { name: "\u200B", value: "\u200B" },
       )
       .setTimestamp()
       .setFooter({
@@ -75,7 +74,7 @@ module.exports = {
     const row = new ActionRowBuilder().addComponents(
       settingsButton,
       enableButton,
-      disableButton
+      disableButton,
     );
     const response = await interaction.reply({
       embeds: [replyEmbed],
@@ -122,7 +121,7 @@ module.exports = {
           .setStyle(TextInputStyle.Short)
           .setRequired(true);
         const ActionRow = new ActionRowBuilder().addComponents(
-          presenceSettingsInput
+          presenceSettingsInput,
         );
 
         modal.addComponents(ActionRow);
