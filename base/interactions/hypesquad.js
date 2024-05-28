@@ -111,7 +111,7 @@ module.exports = {
         });
       }
     } catch (e) {
-      console.log(e);
+      client.log(e, "error");
       await interaction.editReply({
         content: "Confirmation not received within 1 minute, cancelling",
         embeds: [],

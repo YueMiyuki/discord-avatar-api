@@ -60,6 +60,7 @@ module.exports = {
       res.send(canvas.toBuffer());
     } catch (e) {
       console.log(e);
+      client.log(e, "error");
     }
   },
 };

@@ -1,3 +1,5 @@
+// Presence selection handler
+
 const {
   ActionRowBuilder,
   ButtonBuilder,
@@ -41,6 +43,7 @@ module.exports = {
       .setDescription("\u200B")
       .addFields(
         { name: "Enabled?", value: `${userEnable}`, inline: true },
+        { name: "\u200B", value: "\u200B" },
         { name: "Content", value: `${currentSettings}`, inline: true },
         { name: "\u200B", value: "\u200B" },
       )
@@ -65,6 +68,11 @@ module.exports = {
       .setLabel("Disable")
       .setStyle(ButtonStyle.Danger);
 
+    const cancelAction = new ButtonBuilder()
+      .setCustomId("presenceCancel")
+      .setLabel("Cancel")
+      .setStyle(ButtonStyle.Secondary);
+
     if (!isEnabled) {
       disableButton.setDisabled(true);
     } else if (isEnabled) {
@@ -75,6 +83,7 @@ module.exports = {
       settingsButton,
       enableButton,
       disableButton,
+      cancelAction,
     );
     const response = await interaction.reply({
       embeds: [replyEmbed],
@@ -120,6 +129,7 @@ module.exports = {
           .setPlaceholder("Enter some text!")
           .setStyle(TextInputStyle.Short)
           .setRequired(true);
+
         const ActionRow = new ActionRowBuilder().addComponents(
           presenceSettingsInput,
         );

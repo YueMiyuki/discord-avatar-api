@@ -68,7 +68,7 @@ module.exports = {
         components: [row],
       });
     } catch (e) {
-      console.log(e);
+      client.log(e, "error");
       await interaction.editReply({
         content: "An error occur!",
         embeds: [],

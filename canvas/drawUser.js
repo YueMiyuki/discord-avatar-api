@@ -8,20 +8,39 @@ module.exports = {
     const path = require("path");
     const font = "Seto";
 
-    let name = user.globalName;
-    let username = user.username;
+    const globalUsernameEnabled = await db.get("username_enable_" + user.id);
+    if (globalUsernameEnabled) {
+      const customUsername = await db.get("username_" + user.id);
+      let RealName;
+      if (customUsername === "Default") {
+        RealName = user.username;
+      } else if (customUsername !== "Default") {
+        RealName = customUsername;
+      }
 
-    ctx.font = `bold 50px ${font}`;
-    ctx.fillStyle = "#FFFFFF";
-    ctx.textAlign = "start";
-    ctx.strokeStyle = "#f5f5f5";
-    ctx.fillText(`${name}`, 240, 90, 100);
+      ctx.font = `bold 20px ${font}`;
+      ctx.fillStyle = "#FFFFFF";
+      ctx.textAlign = "start";
+      ctx.strokeStyle = "#f5f5f5";
+      ctx.fillText(`${RealName}`, 245, 118);
+    }
 
-    ctx.font = `bold 20px ${font}`;
-    ctx.fillStyle = "#FFFFFF";
-    ctx.textAlign = "start";
-    ctx.strokeStyle = "#f5f5f5";
-    ctx.fillText(`${username}`, 245, 118);
+    const usernameEnabled = await db.get("globalName_enable_" + user.id);
+    if (usernameEnabled) {
+      const customGlobalUsername = await db.get("globalName_" + user.id);
+      let realUsername;
+      if (customGlobalUsername === "Default") {
+        realUsername = user.globalName;
+      } else if (customGlobalUsername !== "Default") {
+        realUsername = customGlobalUsername;
+      }
+
+      ctx.font = `bold 50px ${font}`;
+      ctx.fillStyle = "#FFFFFF";
+      ctx.textAlign = "start";
+      ctx.strokeStyle = "#f5f5f5";
+      ctx.fillText(`${realUsername}`, 240, 90, 100);
+    }
 
     // Start Hypesquad section
     const hypesquad = await db.get("hypesquad_" + user.id);

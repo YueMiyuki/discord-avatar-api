@@ -15,12 +15,6 @@ module.exports = {
     const client = interaction.client;
     await interaction.deferReply();
     try {
-      // const user = await interaction.guild.members.fetch({ user: interaction.user.id, withPresences: true })
-
-      // const guild = await interaction.guild.fetch()
-      // const user = await guild.members.fetch(interaction.member.id)
-      // console.log(user)
-
       const user_ff = await client.users.fetch(interaction.member.id, {
         force: true,
       });
@@ -84,6 +78,9 @@ module.exports = {
           db.set("username_" + interaction.user.id, "Default");
           db.set("username_enable_" + interaction.user.id, true);
 
+          db.set("globalName_" + interaction.user.id, "Default");
+          db.set("globalName_enable_" + interaction.user.id, true);
+
           db.set("banner_" + interaction.user.id, true);
 
           db.set("online_" + interaction.user.id, true);
@@ -97,7 +94,7 @@ module.exports = {
           });
         }
       } catch (e) {
-        console.log(e);
+        client.log(e, "error");
         await interaction.editReply({
           content: "Confirmation not received within 1 minute, cancelling",
           embeds: [],
