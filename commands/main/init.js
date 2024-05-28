@@ -73,8 +73,22 @@ module.exports = {
             components: [],
             fetchReply: true,
           });
+
           db.set(dbKey, dbValue);
-          db.set("hypesquad_" + interaction.guild.id, true);
+          db.set("hypesquad_" + interaction.user.id, true);
+          db.set("font_" + interaction.user.id, "Seto");
+
+          db.set("presence_" + interaction.user.id, "Default");
+          db.set("presence_enable_" + interaction.user.id, true);
+
+          db.set("username_" + interaction.user.id, "Default");
+          db.set("username_enable_" + interaction.user.id, true);
+          
+          db.set("banner_" + interaction.user.id, true);
+
+          db.set("online_" + interaction.user.id, true);
+          db.set("online_enable_" + interaction.user.id, true);
+
         } else if (confirmation.customId === "cancel") {
           await confirmation.update({
             content: "Action cancelled",

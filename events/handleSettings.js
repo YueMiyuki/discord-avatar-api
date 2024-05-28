@@ -9,5 +9,11 @@ module.exports = {
     if (interaction.values[0] === "hypesquad") {
       require("../base/interactions/hypesquad.js").handler(interaction);
     }
+    if (interaction.values[0] === "font") {
+      require("../base/interactions/font.js").handler(interaction);
+    }
+    if (interaction.values[0] === "presence") {
+      require("../base/interactions/presence.js").handler(interaction);
+    }
   },
 };

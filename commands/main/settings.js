@@ -44,9 +44,9 @@ module.exports = {
             .setDescription("What font would you like to use?")
             .setValue("font"),
           new StringSelectMenuOptionBuilder()
-            .setLabel("Status Settings")
-            .setDescription("Set your status in the banner!")
-            .setValue("status"),
+            .setLabel("Presence Settings")
+            .setDescription("Set your Presence in the banner!")
+            .setValue("presence"),
           new StringSelectMenuOptionBuilder()
             .setLabel("Username settings")
             .setDescription("Set your username in the banner!")

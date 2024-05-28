@@ -16,13 +16,34 @@ module.exports = {
     const acolor = await client.b2h(user_ff.accentColor);
 
     const isEnabled = db.get("hypesquad_" + interaction.user.id);
+    let userEnable
+    if (isEnabled) {
+      userEnable = "Yes"
+    } else if (!isEnabled) {
+      userEnable = "No"
+    }
+
+    let hypesquadA
+    let hypesquad;
+    if (user.flags.toArray()) {
+      hypesquadA = user.flags.toArray()[0];
+      if (hypesquadA === "HypeSquadOnlineHouse2") {
+        hypesquad = "Brilliance";
+      } else if (hypesquadA === "HypeSquadOnlineHouse3") {
+        hypesquad = "Balance";
+      } else if (hypesquadA === "HypeSquadOnlineHouse1") {
+        hypesquad === "Bravery";
+      }
+    }
+
+    
     const replyEmbed = new EmbedBuilder()
       .setColor(acolor)
       .setTitle("Hypesquad configuration")
       .setDescription("\u200B")
       .addFields(
-        { name: "Enabled?", value: "True", inline: true },
-        { name: "Hypesquad", value: "Brilliance", inline: true },
+        { name: "Enabled?", value: `${userEnable}`, inline: true },
+        { name: "Hypesquad", value: `${hypesquad}`, inline: true },
         { name: "\u200B", value: "\u200B" },
       )
       .setTimestamp()
