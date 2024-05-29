@@ -72,13 +72,10 @@ module.exports = {
           db.set("hypesquad_" + interaction.user.id, true);
           db.set("font_" + interaction.user.id, "Seto");
 
-          db.set("presence_" + interaction.user.id, "Default");
           db.set("presence_enable_" + interaction.user.id, true);
 
-          db.set("username_" + interaction.user.id, "Default");
           db.set("username_enable_" + interaction.user.id, true);
 
-          db.set("globalName_" + interaction.user.id, "Default");
           db.set("globalName_enable_" + interaction.user.id, true);
 
           db.set("banner_" + interaction.user.id, true);

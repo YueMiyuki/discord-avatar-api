@@ -18,13 +18,13 @@ module.exports = {
 
     let state;
     const presenceSettings = await db.get("presence_" + guildMember.id);
-    if (presenceSettings === "Default") {
+    if (presenceSettings === null) {
       if (guildMember.presence.activities.length !== 0) {
         state = await guildMember.presence.activities[0].state;
       } else {
         state = "No status";
       }
-    } else if (presenceSettings !== "Default") {
+    } else if (presenceSettings !== null) {
       state = await presenceSettings;
     }
 

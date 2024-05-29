@@ -22,10 +22,10 @@ module.exports = {
 
     const presenceSettings = await db.get("presence_" + interaction.user.id);
     let currentSettings;
-    if (presenceSettings === "Default") {
+    if (presenceSettings === null) {
       currentSettings =
         "Default (Your presnece will be shown as it is on Discord)";
-    } else if (presenceSettings !== "Default") {
+    } else if (presenceSettings !== null) {
       currentSettings = presenceSettings;
     }
 
@@ -128,7 +128,7 @@ module.exports = {
           .setLabel("Set your custom presence on the banner!")
           .setPlaceholder("Enter some text!")
           .setStyle(TextInputStyle.Short)
-          .setRequired(true);
+          .setRequired(false);
 
         const ActionRow = new ActionRowBuilder().addComponents(
           presenceSettingsInput,

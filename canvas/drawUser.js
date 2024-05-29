@@ -8,13 +8,13 @@ module.exports = {
     const path = require("path");
     const font = "Seto";
 
-    const globalUsernameEnabled = await db.get("username_enable_" + user.id);
-    if (globalUsernameEnabled) {
+    const UsernameEnabled = await db.get("username_enable_" + user.id);
+    if (UsernameEnabled) {
       const customUsername = await db.get("username_" + user.id);
       let RealName;
-      if (customUsername === "Default") {
+      if (customUsername === null) {
         RealName = user.username;
-      } else if (customUsername !== "Default") {
+      } else if (customUsername !== null) {
         RealName = customUsername;
       }
 
@@ -25,13 +25,13 @@ module.exports = {
       ctx.fillText(`${RealName}`, 245, 118);
     }
 
-    const usernameEnabled = await db.get("globalName_enable_" + user.id);
-    if (usernameEnabled) {
+    const globalUsernameEnabled = await db.get("globalName_enable_" + user.id);
+    if (globalUsernameEnabled) {
       const customGlobalUsername = await db.get("globalName_" + user.id);
       let realUsername;
-      if (customGlobalUsername === "Default") {
+      if (customGlobalUsername === null) {
         realUsername = user.globalName;
-      } else if (customGlobalUsername !== "Default") {
+      } else if (customGlobalUsername !== null) {
         realUsername = customGlobalUsername;
       }
 
