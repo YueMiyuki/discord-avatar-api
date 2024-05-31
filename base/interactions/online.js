@@ -2,7 +2,7 @@ const {
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
-  EmbedBuilder
+  EmbedBuilder,
 } = require("discord.js");
 
 module.exports = {
@@ -33,7 +33,7 @@ module.exports = {
         .setDescription("\u200B")
         .addFields(
           { name: "Enabled?", value: `${userEnable}`, inline: true },
-          { name: "\u200B", value: "\u200B" }
+          { name: "\u200B", value: "\u200B" },
         )
         .setTimestamp()
         .setFooter({
@@ -56,16 +56,16 @@ module.exports = {
         .setLabel("Cancel")
         .setStyle(ButtonStyle.Secondary);
 
-        if (!isEnabled) {
-            disableButton.setDisabled(true);
-          } else if (isEnabled) {
-            enableButton.setDisabled(true);
-          }
+      if (!isEnabled) {
+        disableButton.setDisabled(true);
+      } else if (isEnabled) {
+        enableButton.setDisabled(true);
+      }
 
       const row = new ActionRowBuilder().addComponents(
         enableButton,
         disableButton,
-        cancelAction
+        cancelAction,
       );
 
       const response = await interaction.reply({

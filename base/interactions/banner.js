@@ -4,9 +4,8 @@ const {
   ButtonStyle,
   EmbedBuilder,
   ModalBuilder,
-    TextInputBuilder,
-    TextInputStyle,
-
+  TextInputBuilder,
+  TextInputStyle,
 } = require("discord.js");
 
 module.exports = {
@@ -37,7 +36,7 @@ module.exports = {
       .addFields(
         { name: "Enabled?", value: `${isEnabled}`, inline: true },
         { name: "Color", value: `${acolor}`, inline: true },
-        { name: "\u200B", value: "\u200B" }
+        { name: "\u200B", value: "\u200B" },
       )
       .setTimestamp()
       .setFooter({
@@ -75,7 +74,7 @@ module.exports = {
       enableButton,
       disableButton,
       editConfig,
-      cancelAction
+      cancelAction,
     );
 
     const response = await interaction.reply({
@@ -115,7 +114,6 @@ module.exports = {
           fetchReply: true,
         });
       } else if (confirmation.customId === "bannerEdit") {
-
         const modal = new ModalBuilder()
           .setCustomId("bannerBorderModal")
           .setTitle("Banner Modal settings");
@@ -130,7 +128,7 @@ module.exports = {
           .setRequired(false);
 
         const ActionRow = new ActionRowBuilder().addComponents(
-            bannerBorderInputModal,
+          bannerBorderInputModal,
         );
 
         modal.addComponents(ActionRow);
