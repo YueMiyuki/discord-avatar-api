@@ -5,26 +5,26 @@ module.exports = {
     const Canvas = require("canvas");
     const path = require("path");
 
+    if (!req.query.userid) {
+      res.status(400);
+      res.send("400 Bad request");
+      return;
+    }
+
     try {
       const db = client.db;
-      const guildID = db.get(req.query.userID);
+      const uid = req.query.userid;
 
-      if (!req.query.userID) {
-        res.status(400);
-        res.send("400 Bad request");
-        return;
-      }
+      const guildID = db.get(uid);
+      const guild = await client.guilds.fetch(guildID);
 
       if (!guildID) {
         res.status(404);
         res.send(
-          "404 Not found\nYou may use /init command to set guild first!",
+          "404 Not found\nYou may use /init command to set guild first!"
         );
         return;
       }
-
-      const guild = await client.guilds.fetch(guildID);
-      const uid = req.query.userID;
 
       const guildMember = await guild.members.fetch(uid, {
         withPresences: true,
@@ -46,14 +46,14 @@ module.exports = {
         client,
         ctx,
         user_ff,
-        canvas,
+        canvas
       );
       await require("../canvas/drawAvatar").drawAvatar(client, ctx, user);
       await require("../canvas/drawUser").drawUser(client, ctx, user);
       await require("../canvas/drawPresence").drawPresence(
         client,
         ctx,
-        guildMember,
+        guildMember
       );
 
       res.setHeader("Content-Type", "image/png");
