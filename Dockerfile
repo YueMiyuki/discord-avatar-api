@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM 20.13.1-alpine
+FROM node:20.13.1-alpine3.20
 LABEL name = daApi
 
 RUN apk update
