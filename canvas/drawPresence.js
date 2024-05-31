@@ -64,6 +64,8 @@ module.exports = {
       ctx.fillText(line, 245, 155 + index * 25); // Adjust the Y-coordinate for each line
     });
 
+    const presenceEnable = await db.get("online_enable_" + guildMember.id);
+    if (!presenceEnable) return;
     if (presence === "idle") {
       ctx.shadowColor = "#F0B333";
       ctx.shadowBlur = 13;

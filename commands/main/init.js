@@ -78,7 +78,7 @@ module.exports = {
 
           db.set("globalName_enable_" + interaction.user.id, true);
 
-          db.set("banner_" + interaction.user.id, true);
+          db.set("banner_enable_" + interaction.user.id, true);
 
           db.set("online_" + interaction.user.id, true);
           db.set("online_enable_" + interaction.user.id, true);

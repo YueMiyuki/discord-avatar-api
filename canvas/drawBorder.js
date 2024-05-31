@@ -2,7 +2,18 @@
 
 module.exports = {
   drawBorder: async function (client, ctx, user, canvas) {
-    const acolor = client.b2h(user.accentColor);
+    const db = client.db;
+    const isEnabled = await db.get("banner_enable_" + user.id);
+    if (!isEnabled) return;
+
+    const color = await db.get("banner_" + user.id);
+
+    let acolor;
+    if (!color) {
+      acolor = client.b2h(user.accentColor);
+    } else if (color) {
+      acolor = color;
+    }
     const borderWidth = 8;
     const borderRadius = 14;
     ctx.lineWidth = borderWidth;
