@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: docker.io
   APP_NAME: ${{ github.event.repository.name }}
-  DOCKERHUB_REPO: itztsuki/discord-linuxserver
+  DOCKERHUB_REPO: itzmiracle/discord-avatar-api
   IMAGE_NAME: ${{ github.event.repository.name }}
 
 jobs:
