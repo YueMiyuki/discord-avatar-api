@@ -7,7 +7,7 @@ module.exports = {
 
     if (!req.query.userid) {
       res.status(400);
-      res.send("400 Bad request");
+      res.send("400 Bad request\nMissing flag: userid");
       return;
     }
 
